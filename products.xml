@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<website>
+  <nav>
+    <logo src="Images/sneaker logo-modified.png" alt="logo" />
+    <search>
+      <input type="text" placeholder="Search..." />
+      <img src="Images/img.png" alt="search_icon" />
+    </search>
+    <limitedOffer>Limited Offer!</limitedOffer>
+    <menu>
+      <menuItem>AIR FORCE</menuItem>
+      <menuItem>JORDAN</menuItem>
+      <menuItem>BLAZER</menuItem>
+      <menuItem>CRATER</menuItem>
+      <menuItem>HIPPIE</menuItem>
+    </menu>
+  </nav>
+  
+  <slider>
+    <item>
+      <img src="Images/air.png" alt="" />
+      <title>AIR FORCE NEW SEASON</title>
+      <price>5000rs</price>
+    </item>
+    <!-- Add more slider items as needed -->
+  </slider>
+
+  <features>
+    <feature>
+      <icon src="Images/shipping.png" alt="" />
+      <title>FREE SHIPPING</title>
+      <desc>Free worldwide shipping on all orders.</desc>
+    </feature>
+    <feature>
+      <icon src="Images/return.png" alt="" />
+      <title>30 DAYS RETURN</title>
+      <desc>No question return and easy refund in 14 days.</desc>
+    </feature>
+    <feature>
+      <icon src="Images/gift.png" alt="" />
+      <title>GIFT CARDS</title>
+      <desc>Buy gift cards and use coupon codes easily.</desc>
+    </feature>
+    <feature>
+      <icon src="Images/contact.png" alt="" />
+      <title>CONTACT US!</title>
+      <desc>Keep in touch via email and support system.</desc>
+    </feature>
+  </features>
+
+  <product>
+    <img src="./Images/air.png" alt="" />
+    <details>
+      <title>AIR FORCE</title>
+      <price>$199</price>
+      <desc>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Alias assumenda dolorum doloremque sapiente aliquid aperiam.
+      </desc>
+    </details>
+    <colors>
+      <color></color>
+      <color></color>
+    </colors>
+    <sizes>
+      <size>42</size>
+      <size>43</size>
+      <size>44</size>
+    </sizes>
+    <button>BUY NOW!</button>
+  </product>
+
+  <!-- Add more sections and elements as needed -->
+</website>
