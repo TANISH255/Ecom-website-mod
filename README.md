@@ -29,8 +29,8 @@ If the file is too big, upload to YouTube and use:
 
 ```
 ┌──────────┐   HTTP   ┌───────────────┐  proxy  ┌──────────────────────┐
-│ Browser  │ ───────► │ nginx (EC2)   │ ──────► │ Docker: Node/Express │
-└──────────┘          │ port 80/443   │         │ port 3000 (local)    │
+│ Browser  │ ───────► │ EC2           │ ──────► │ Docker: Node/Express │
+└──────────┘          │ port 80/443   │         │ port 3000            │
                       └───────────────┘         └──────────┬───────────┘
                                                            │ Mongoose
                                                            ▼
