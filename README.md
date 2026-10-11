@@ -59,7 +59,7 @@ A end-to-end data project. A sneaker storefront (Node.js + Express) collects che
 | Frontend | HTML, CSS, vanilla JavaScript |
 | Backend | Node.js, Express, Mongoose, dotenv |
 | Database | MongoDB Atlas (free M0 cluster) |
-| Hosting | AWS EC2 (Ubuntu 24.04), Docker, nginx, optional Let's Encrypt HTTPS |
+| Hosting | AWS EC2 (Ubuntu 24.04), Docker |
 | Data pipeline | Databricks, PySpark, pymongo, Delta Lake |
 
 ---
