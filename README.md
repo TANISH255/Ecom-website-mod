@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/a5e4a396-d0f0-4c1c-8e1c-416180e92c90
+
 # SneakerHead: E-commerce Site → MongoDB Atlas → Databricks Delta Pipeline
 
 A small end-to-end data project. A sneaker storefront (Node.js + Express) collects checkout form submissions, stores them in **MongoDB Atlas**, and a **Databricks** notebook incrementally loads them into a **Delta table**. The website is hosted on **AWS EC2** behind **nginx** and runs in **Docker**.
