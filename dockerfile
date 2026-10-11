@@ -1,27 +1,18 @@
-# Use the official Node.js image as a base
-FROM node:18
+FROM node:22-alpine
 
-# Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# Install dependencies first so Docker can cache this layer
 COPY package*.json ./
+RUN npm ci --omit=dev
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of your application files to the container
+# Copy the app source (filtered by .dockerignore)
 COPY . .
 
-# Run npm audit and fix vulnerabilities (if desired)
-# Run npm audit and ignore failures
-RUN npm audit || echo "npm audit failed, continuing..."
-
-# Attempt to fix vulnerabilities and ignore failures
-RUN npm audit fix --force || echo "npm audit fix failed, continuing..."
-
-# Expose the port your app runs on
+ENV NODE_ENV=production
 EXPOSE 3000
 
-# Command to run your app
+# Run as the non-root user that ships with the Node image
+USER node
+
 CMD ["node", "server.js"]
