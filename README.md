@@ -2,14 +2,6 @@
 
 https://github.com/user-attachments/assets/a5e4a396-d0f0-4c1c-8e1c-416180e92c90
 
-# SneakerHead: E-commerce Site → MongoDB Atlas → Databricks Delta Pipeline
-
-A small end-to-end data project. A sneaker storefront (Node.js + Express) collects checkout form submissions, stores them in **MongoDB Atlas**, and a **Databricks** notebook incrementally loads them into a **Delta table**. The website is hosted on **AWS EC2** behind **nginx** and runs in **Docker**.
-
-> **Dummy project.** The card number, expiry and CVV fields exist only to simulate a checkout. Use fake values only. Never enter real card details, and never store a real CVV.
-
----
-
 ## Demo
 
 <!--
@@ -28,6 +20,14 @@ If the file is too big, upload to YouTube and use:
 3. Databricks pipeline runs and loads the new records into the Delta table `users_bronze`
 
 ---
+# E-commerce Site → MongoDB Atlas → Databricks Delta Pipeline
+
+A end-to-end data project. A sneaker storefront (Node.js + Express) collects checkout form submissions, stores them in **MongoDB Atlas**, and a **Databricks** notebook incrementally loads them into a **Delta table**. 
+
+> **Dummy project.** The card number, expiry and CVV fields exist only to simulate a checkout. Use fake values only. Never enter real card details, and never store a real CVV.
+
+---
+
 
 ## Architecture
 
@@ -367,13 +367,7 @@ Databricks serverless compute has no fixed IP, so Atlas must allow connections f
 - Before publishing the demo video, make sure no frame shows the connection string, password, `.env`, or secret scope contents.
 - `card_cvv`, `card_month` and `card_year` are stored only because this is a dummy checkout. A real site must never store a CVV (PCI DSS) and should hand card handling to a payment provider such as Stripe or Razorpay.
 
-## Possible improvements
 
-- Silver layer: clean types, remove duplicates, mask the phone number and address
-- Gold layer: orders per product, once the form also saves the chosen product, size and price
-- Filter on `updatedAt` instead of `createdAt` so edits made in Atlas are also captured
-- Replace the form's card fields with a payment provider integration
-- CI/CD: build and deploy to EC2 automatically on push
 
 ## Author
 
