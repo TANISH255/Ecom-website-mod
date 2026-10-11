@@ -43,7 +43,7 @@ card : {
   validate: {
     validator: function(v) {
       console.log(v," testing ")
-      return `${v}`.length === 4 ;
+      return `${v}`.length >= 4 ;
 
     },
     message: 'Should be atleast 4 digits!'
@@ -65,7 +65,7 @@ card_year : {
   validate: {
     validator: function(v) {
       console.log(v," testing ")
-      return `${v}`.length === 4 ;
+      return `${v}`.length >= 4 ;
 
     },
     message: '{VALUE} is not a valid 4 digit number!'
@@ -82,7 +82,8 @@ card_cvv : {
     message: '{VALUE} is not a valid 3 digit number!'
 }
 },
-});
+},
+{ timestamps: true });
 
 const User = mongoose.model("users", userSchema);
 
